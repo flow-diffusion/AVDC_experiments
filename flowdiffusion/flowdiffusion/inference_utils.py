@@ -171,7 +171,7 @@ def get_video_model(ckpts_dir='../ckpts/metaworld', milestone=24, flow=False, ti
         valid_set=[1],
         results_folder = ckpts_dir,
         fp16 =True,
-        amp=False,
+        amp=True,
     )
     
     trainer.load(milestone)
