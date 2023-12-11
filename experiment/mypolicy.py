@@ -12,6 +12,11 @@ from torchvision import transforms as T
 import torch
 import time
 import pickle
+import random
+
+random.seed(0)
+np.random.seed(0)
+torch.manual_seed(0)
 
 with open("name2maskid.json", "r") as f:
     name2maskid = json.load(f)

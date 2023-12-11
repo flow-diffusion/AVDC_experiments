@@ -15,8 +15,11 @@ import torch.nn.functional as F
 from rigid_transform import *
 import time 
 from torch import nn
+import random
 
+random.seed(0)
 np.random.seed(0)
+torch.manual_seed(0)
 
 class dummy_model(nn.Module):
     def __init__(self):

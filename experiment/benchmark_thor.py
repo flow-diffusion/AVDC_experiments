@@ -138,7 +138,7 @@ scene2targets = {
 }
 
 def eval(scene, target, n_seeds=20, log=True):
-    video_model = get_video_model_thor(ckpts_dir='../ckpts/ithor', milestone=30)
+    video_model = get_video_model_thor(ckpts_dir='../ckpts/ithor', milestone=16)
     flow_model = get_flow_model()
 
     env = ThorEnv(scene, target)

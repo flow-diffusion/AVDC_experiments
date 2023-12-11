@@ -37,7 +37,7 @@ def get_policy(env_name):
 with open("name2maskid.json", "r") as f:
     name2maskid = json.load(f)
 
-result_root = "results_vidplan_CL"
+result_root = "../results/results_AVDC_full"
 os.makedirs(result_root, exist_ok=True)
 
 n_exps = 25
@@ -47,7 +47,7 @@ cameras = ['corner', 'corner2', 'corner3']
 max_replans = 5
 
 
-video_model = get_video_model(ckpts_dir="../ckpts/metaworld", milestone=24)
+video_model = get_video_model(ckpts_dir="../ckpts/metaworld_DA", milestone=24)
 flow_model = get_flow_model()
 
 try:
