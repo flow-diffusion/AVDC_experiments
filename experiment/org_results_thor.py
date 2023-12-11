@@ -37,6 +37,6 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--result_root', default='../results/results_thor_leg', type=str)
+    parser.add_argument('--result_root', default='../results/results_AVDC_thor', type=str)
     args = parser.parse_args()
     main(args)
