@@ -9,7 +9,7 @@ code base for training video policies [here](https://github.com/flow-diffusion/A
 [Yilun Du](https://yilundu.github.io/),
 [Shao-Hua Sun](https://shaohua0116.github.io/),
 [Joshua B. Tenenbaum](https://cocosci.mit.edu/josh)  
-[website](https://flow-diffusion.github.io/) | [paper](https://flow-diffusion.github.io/AVDC.pdf) | [arXiv](https://arxiv.org/abs/2310.08576)
+[website](https://flow-diffusion.github.io/) | [paper](https://flow-diffusion.github.io/AVDC.pdf) | [arXiv](https://arxiv.org/abs/2310.08576) | [video policy](https://github.com/flow-diffusion/AVDC)
 
 ```bib
 @article{Ko2023Learning,
@@ -44,8 +44,8 @@ We provide the checkpoints used in our main experiments. You can download them u
 
 ```bash
 bash download.sh metaworld
-# bash download.sh metaworld_DA
-# bash download.sh metaworld_ithor 
+# bash download.sh metaworld-DA
+# bash download.sh ithor 
 ```
 
 ## Running the Experiments
@@ -62,14 +62,14 @@ To run the full AVDC on Meta-World, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/metaworld/model-24.pt
-bash run_metaworld.sh
+bash benchmark_mw.sh
 ```
 
-We have provided also provided another checkpoint trained with simple random-shift data augmentation. Specifically we first center cropped the image to 160x160 from the original 320x240 image and then random-crop an 128x128 image from it. 
+We have provided also provided another checkpoint trained with simple random-shift data augmentation. Specifically we first center cropped the image to 160x160 from the original 320x240 image and then random-crop an 128x128 image from it. We found slightly improved performance with this simple augmentation. To run the full AVDC on Meta-World with this checkpoint, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/metaworld_DA/model-24.pt
-bash run_metaworld_DA.sh
+bash benchmark_mw_DA.sh
 ```
 
 ### iTHOR
@@ -78,7 +78,7 @@ To run the full AVDC on iTHOR, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/ithor/model-24.pt
-bash run_ithor.sh
+bash benchmark_thor.sh
 ```
 
 ## Acknowledgements
