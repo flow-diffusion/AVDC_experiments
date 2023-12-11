@@ -64,7 +64,9 @@ To run the full AVDC on Meta-World, run the following command:
 bash benchmark_mw.sh
 ```
 
-We have provided also provided another checkpoint trained with simple random-shift data augmentation. Specifically we first center cropped the image to 160x160 from the original 320x240 image and then random-crop an 128x128 image from it. We found slightly improved performance with this simple augmentation. To run the full AVDC on Meta-World with this checkpoint, run the following command:
+We have provided also provided another checkpoint trained with simple random-shift data augmentation. Specifically we first center cropped the image to 160x160 from the original 320x240 image and then random-crop an 128x128 image from it. We found slightly improved performance with this simple augmentation. 
+
+To run the full AVDC on Meta-World with this checkpoint, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/metaworld_DA/model-24.pt
@@ -83,7 +85,7 @@ bash benchmark_thor.sh
 ## Acknowledgements
 
 This codebase is modified from the following repositories:  
-[unimatch](https://github.com/autonomousvision/unimatch)
+[unimatch](https://github.com/autonomousvision/unimatch)  
 [imagen-pytorch](https://github.com/lucidrains/imagen-pytorch)  
 [guided-diffusion](https://github.com/openai/guided-diffusion)  
 
