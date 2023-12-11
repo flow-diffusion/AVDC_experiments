@@ -1,7 +1,6 @@
 # AVDC experiments
 
-The official codebase for running the experiments described in the AVDC paper. 
-code base for training video policies [here](https://github.com/flow-diffusion/AVDC).
+The official codebase for running the experiments described in the AVDC paper. You can find codebase for training video policies [here](https://github.com/flow-diffusion/AVDC).
 
 [Learning to Act from Actionless Video through Dense Correspondences](https://flow-diffusion.github.io/AVDC.pdf)  
 [Po-Chen Ko](https://pochen-ko.github.io/),
@@ -22,7 +21,7 @@ code base for training video policies [here](https://github.com/flow-diffusion/A
 
 ## Getting started
 
-We recommend to create a new environment with pytorch installed using conda.  
+We recommend to create a new environment with pytorch installed using conda. 
 
 ```bash  
 conda create -n avdc_exp python=3.9
