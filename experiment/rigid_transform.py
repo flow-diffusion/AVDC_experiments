@@ -2,6 +2,10 @@ import numpy as np
 from tqdm import tqdm
 from scipy.optimize import minimize
 import multiprocessing as mp
+import random
+
+random.seed(0)
+np.random.seed(0)
 
  
 def get_rigid_transform(ins, cin, outs): 

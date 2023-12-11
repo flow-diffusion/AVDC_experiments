@@ -206,7 +206,7 @@ if __name__ == "__main__":
     target = args.target
     n_seeds = args.n_seeds
     log = args.log
-    savedir = f"../results/results_thor/{scene}/{target}"
+    savedir = f"../results/results_AVDC_thor/{scene}/{target}"
     if os.path.exists(savedir):
         print(f"Skipping {scene} {target}")
     else: 

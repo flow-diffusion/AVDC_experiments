@@ -37,26 +37,27 @@ def get_policy(env_name):
 with open("name2maskid.json", "r") as f:
     name2maskid = json.load(f)
 
-result_root = "../results/results_AVDC_full"
-os.makedirs(result_root, exist_ok=True)
+def run(args):
+    result_root = args.result_root
+    os.makedirs(result_root, exist_ok=True)
 
-n_exps = 25
-resolution = (320, 240)
-frames_per_plan = 8
-cameras = ['corner', 'corner2', 'corner3']
-max_replans = 5
+    n_exps = args.n_exps
+    resolution = (320, 240)
+    cameras = ['corner', 'corner2', 'corner3']
+    max_replans = 5
 
 
-video_model = get_video_model(ckpts_dir="../ckpts/metaworld_DA", milestone=24)
-flow_model = get_flow_model()
+    video_model = get_video_model(ckpts_dir=args.ckpt_dir, milestone=args.milestone)
+    flow_model = get_flow_model()
 
-try:
-    with open(f"{result_root}/result_dict.json", "r") as f:
-        result_dict = json.load(f)
-except:
-    result_dict = {}
+    try:
+        with open(f"{result_root}/result_dict.json", "r") as f:
+            result_dict = json.load(f)
+    except:
+        result_dict = {}
 
-def run(env_name):
+
+    env_name = args.env_name
     print(env_name)
     seg_ids = name2maskid[env_name]
     benchmark_env = env_dict[env_name]
@@ -119,10 +120,21 @@ def run(env_name):
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--env_name", type=str, default="door-open-v2-goal-observable")
+    parser.add_argument("--n_exps", type=int, default=25)
+    parser.add_argument("--ckpt_dir", type=str, default="../ckpts/metaworld")
+    parser.add_argument("--milestone", type=int, default=24)
+    parser.add_argument("--result_root", type=str, default="../results/results_AVDC_full")
     args = parser.parse_args()
+
+    try:
+        with open(f"{args.result_root}/result_dict.json", "r") as f:
+            result_dict = json.load(f)
+    except:
+        result_dict = {}
+
     assert args.env_name in name2maskid.keys()
     if args.env_name in result_dict.keys():
         print("already done")
     else:
-        run(args.env_name)
+        run(args)
         

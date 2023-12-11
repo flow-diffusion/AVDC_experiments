@@ -17,3 +17,5 @@ for target in "Mirror" "ToiletPaper" "SoapBar"
 do
     CUDA_VISIBLE_DEVICES=$1 xvfb-run --auto-servernum python benchmark_thor.py --target $target --scene FloorPlan401
 done
+
+python org_results_thor.py
