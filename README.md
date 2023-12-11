@@ -61,7 +61,8 @@ To run the full AVDC on Meta-World, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/metaworld/model-24.pt
-bash benchmark_mw.sh
+bash benchmark_mw.sh 0
+# the argument 0 is the GPU id, you can change it to other GPU id if you wish
 ```
 
 We have provided also provided another checkpoint trained with simple random-shift data augmentation. Specifically we first center cropped the image to 160x160 from the original 320x240 image and then random-crop an 128x128 image from it. We found slightly improved performance with this simple augmentation. 
@@ -70,7 +71,7 @@ To run the full AVDC on Meta-World with this checkpoint, run the following comma
 
 ```bash
 # make sure you have the checkpoint ../ckpts/metaworld_DA/model-24.pt
-bash benchmark_mw_DA.sh
+bash benchmark_mw_DA.sh 0
 ```
 
 ### iTHOR
@@ -79,7 +80,7 @@ To run the full AVDC on iTHOR, run the following command:
 
 ```bash
 # make sure you have the checkpoint ../ckpts/ithor/model-24.pt
-bash benchmark_thor.sh
+bash benchmark_thor.sh 0
 ```
 
 ## Acknowledgements
