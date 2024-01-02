@@ -4,8 +4,8 @@ from scipy.optimize import minimize
 import multiprocessing as mp
 import random
 
-random.seed(0)
-np.random.seed(0)
+random.seed(1)
+np.random.seed(1)
 
  
 def get_rigid_transform(ins, cin, outs): 

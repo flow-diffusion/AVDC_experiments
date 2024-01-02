@@ -15,6 +15,7 @@ def main(args):
     for room in rooms:
         room_result = {}
         srs = []
+        print(result_root)
         tasks = os.listdir(os.path.join(result_root, room))
         for task in tasks:
             result_file = os.path.join(result_root, room, task, 'result.json')
