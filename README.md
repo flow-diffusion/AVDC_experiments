@@ -79,7 +79,7 @@ bash benchmark_mw_DA.sh 0
 To run the full AVDC on iTHOR, run the following command:
 
 ```bash
-# make sure you have the checkpoint ../ckpts/ithor/model-24.pt
+# make sure you have the checkpoint ../ckpts/ithor/model-16.pt
 bash benchmark_thor.sh 0
 ```
 
