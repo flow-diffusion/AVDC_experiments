@@ -2,7 +2,7 @@
 
 The official codebase for running the experiments described in the AVDC paper. You can find codebase for training video policies [here](https://github.com/flow-diffusion/AVDC).
 
-[Learning to Act from Actionless Video through Dense Correspondences](https://flow-diffusion.github.io/AVDC.pdf)  
+[Learning to Act from Actionless Videos through Dense Correspondences](https://flow-diffusion.github.io/AVDC.pdf)  
 [Po-Chen Ko](https://pochen-ko.github.io/),
 [Jiayuan Mao](https://jiayuanm.com/),
 [Yilun Du](https://yilundu.github.io/),
@@ -12,7 +12,7 @@ The official codebase for running the experiments described in the AVDC paper. Y
 
 ```bib
 @article{Ko2023Learning,
-  title={{Learning to Act from Actionless Video through Dense Correspondences}},
+  title={{Learning to Act from Actionless Videos through Dense Correspondences}},
   author={Ko, Po-Chen and Mao, Jiayuan and Du, Yilun and Sun, Shao-Hua and Tenenbaum, Joshua B},
   journal={arXiv:2310.08576},
   year={2023},
