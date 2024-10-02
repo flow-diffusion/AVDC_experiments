@@ -9,9 +9,9 @@ elif [ "$1" = "metaworld-DA" ]; then
     mv model-24.pt ckpts/metaworld_DA/model-24.pt
     echo "Downloaded metaworld model"
 elif [ "$1" = "ithor" ]; then
-    wget -c https://huggingface.co/Po-Chen/flowdiffusion/resolve/main/ckpts/ithor/model-30.pt
+    wget -c https://huggingface.co/Po-Chen/flowdiffusion/resolve/main/ckpts/ithor/model-16.pt
     mkdir -p ckpts/ithor
-    mv model-30.pt ckpts/ithor/model-30.pt
+    mv model-16.pt ckpts/ithor/model-16.pt
     echo "Downloaded ithor model"
 else 
     echo "Options: {metaworld, metaworld-DA, ithor}"
